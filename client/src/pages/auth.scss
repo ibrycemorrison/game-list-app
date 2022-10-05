@@ -1,0 +1,65 @@
+@import "../main.scss";
+
+.auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    background-color: $subColor;
+    gap: 20px;
+    border-radius: 4px;
+
+    input {
+      color: $mainTextColor;
+      background-color: $subColor;
+      padding: 10px;
+      border: none;
+      border-bottom: 1px solid grey;
+    }
+
+    p {
+      font-size: 12px;
+      color: red;
+      text-align: center;
+    }
+
+    button {
+      padding: 10px;
+      border: none;
+      background-color: $highlightColor;
+      color: $mainTextColor;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    span {
+      font-size: 12px;
+      text-align: center;
+    }
+
+    ::placeholder {
+      // Change placeholder text color
+      color: $mainTextColor;
+      opacity: 1; // Firefox
+    }
+    :-ms-input-placeholder {
+      // Internet Explorer 10-11
+      color: $mainTextColor;
+    }
+    ::-ms-input-placeholder {
+      // Microsoft Edge
+      color: $mainTextColor;
+    }
+  }
+}

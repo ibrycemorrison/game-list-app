@@ -1,0 +1,29 @@
+$topbarHeight: 70px;
+
+$mainDarkBackground: #0b1622;
+$mainDarkText: #ffffff;
+$subDark: #152232;
+$highlightDark: #02a9ff;
+
+$mainBackgroundColor: $mainDarkBackground;
+$mainTextColor: $mainDarkText;
+$subColor: $subDark;
+$highlightColor: $highlightDark;
+
+.app {
+  min-height: calc(100vh - $topbarHeight);
+  background-color: $mainBackgroundColor;
+  color: $mainTextColor;
+  caret-color: $mainTextColor;
+
+  .container {
+    .link {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .outletcontainer {
+      margin-top: $topbarHeight;
+    }
+  }
+}

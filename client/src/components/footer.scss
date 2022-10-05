@@ -1,0 +1,31 @@
+@import "../main.scss";
+
+.footer {
+  margin-top: 100px;
+  padding: 20px;
+  background-color: rgb(56, 56, 56);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+
+  .container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 85%;
+    }
+  }
+
+  img {
+    filter: invert(43%) sepia(82%) saturate(1754%) hue-rotate(175deg)
+      brightness(105%) contrast(102%);
+    height: 50px;
+  }
+}
