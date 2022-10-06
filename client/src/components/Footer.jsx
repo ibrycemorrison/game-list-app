@@ -6,7 +6,7 @@ export default function Footer() {
     <div className="footer">
       <div className="container">
         <footer>
-          <img src="../../assets/logo.svg" alt="" />
+          <img src="assets/logo.svg" alt="" />
           <span>
             Made with ❤️ and <b>React.js</b>
           </span>

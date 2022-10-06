@@ -9,6 +9,7 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Game from "./pages/Game";
 import GameList from "./pages/GameList";
+import Browse from "./pages/Browse";
 import PageNotFound from "./pages/PageNotFound";
 import Topbar from "./components/Topbar";
 import Footer from "./components/Footer";
@@ -21,8 +22,8 @@ const Layout = () => {
       <Topbar />
       <div className="outletcontainer">
         <Outlet />
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 };
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: "/gamelist",
         element: <GameList />,
+      },
+      {
+        path: "/games",
+        element: <Browse />,
       },
     ],
   },

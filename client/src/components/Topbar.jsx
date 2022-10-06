@@ -12,7 +12,7 @@ export default function Topbar() {
       <div className="container">
         <div className="logo">
           <Link to="/">
-            <img src="../../assets/logo.svg" alt="" />
+            <img src="assets/logo.svg" alt="" />
           </Link>
         </div>
         <div className="links">
@@ -25,7 +25,7 @@ export default function Topbar() {
           <Link className="link" to="/gamelist">
             Game List
           </Link>
-          <Link className="link" to="/">
+          <Link className="link" to="/games">
             Browse
           </Link>
         </div>

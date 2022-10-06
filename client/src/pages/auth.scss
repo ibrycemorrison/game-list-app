@@ -47,19 +47,5 @@
       font-size: 12px;
       text-align: center;
     }
-
-    ::placeholder {
-      // Change placeholder text color
-      color: $mainTextColor;
-      opacity: 1; // Firefox
-    }
-    :-ms-input-placeholder {
-      // Internet Explorer 10-11
-      color: $mainTextColor;
-    }
-    ::-ms-input-placeholder {
-      // Microsoft Edge
-      color: $mainTextColor;
-    }
   }
 }
