@@ -19,7 +19,7 @@ export default function Topbar() {
           <Link className="link" to="/">
             Home
           </Link>
-          <Link className="link" to="/">
+          <Link className="link" to="/profile">
             Profile
           </Link>
           <Link className="link" to="/gamelist">

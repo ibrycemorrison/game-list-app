@@ -1,15 +1,11 @@
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-  Outlet,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Game from "./pages/Game";
 import GameList from "./pages/GameList";
 import Browse from "./pages/Browse";
+import Profile from "./pages/Profile";
 import PageNotFound from "./pages/PageNotFound";
 import Topbar from "./components/Topbar";
 import Footer from "./components/Footer";
@@ -49,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: "/games",
         element: <Browse />,
+      },
+      {
+        path: "/profile",
+        element: <Profile />,
       },
     ],
   },
