@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-import GameBox from "../components/GameBox";
+import GameBox from "../../components/GameBox";
 import "./browse.scss";
 
 export default function Browse() {
@@ -37,7 +37,7 @@ export default function Browse() {
           <img src="assets/search.svg" alt="" />
           <input
             type="text"
-            placeholder="search"
+            placeholder=""
             name="search"
             onChange={handleChange}
           />

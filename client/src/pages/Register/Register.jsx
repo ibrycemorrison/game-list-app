@@ -1,18 +1,18 @@
-import React, { useContext, useState } from "react";
+import React from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { AuthContext } from "../context/authContext";
-import "./auth.scss";
+import axios from "axios";
+import "../auth.scss";
 
-export default function Login() {
+export default function Register() {
   const [inputs, setInputs] = useState({
     username: "",
+    email: "",
     password: "",
   });
   const [error, setError] = useState(null);
 
   const navigate = useNavigate();
-
-  const { login } = useContext(AuthContext);
 
   const handleChange = (e) => {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -22,8 +22,8 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await login(inputs);
-      navigate("/");
+      await axios.post("/auth/register", inputs);
+      navigate("/login");
     } catch (err) {
       setError(err.response.data);
     }
@@ -31,7 +31,7 @@ export default function Login() {
 
   return (
     <div className="auth">
-      <h1>Login</h1>
+      <h1>Register</h1>
       <form>
         <input
           required
@@ -42,15 +42,22 @@ export default function Login() {
         />
         <input
           required
+          type="text"
+          placeholder="email"
+          name="email"
+          onChange={handleChange}
+        />
+        <input
+          required
           type="password"
           placeholder="password"
           name="password"
           onChange={handleChange}
         />
-        <button onClick={handleSubmit}>Login</button>
+        <button onClick={handleSubmit}>Register</button>
         {error && <p>{error}</p>}
         <span>
-          Don't have an account? <Link to="/register">Register</Link>
+          Already have an account? <Link to="/login">Login</Link>
         </span>
       </form>
     </div>
