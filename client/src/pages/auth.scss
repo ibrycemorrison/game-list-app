@@ -16,13 +16,13 @@
     display: flex;
     flex-direction: column;
     padding: 50px;
-    background-color: $subColor;
+    background-color: var(--app-subColor);
     gap: 20px;
     border-radius: 4px;
 
     input {
-      color: $mainTextColor;
-      background-color: $subColor;
+      color: var(--app-mainTextColor);
+      background-color: var(--app-subColor);
       padding: 10px;
       border: none;
       border-bottom: 1px solid grey;
@@ -37,8 +37,8 @@
     button {
       padding: 10px;
       border: none;
-      background-color: $highlightColor;
-      color: $mainTextColor;
+      background-color: var(--app-highlightColor);
+      color: var(--app-mainTextColor);
       cursor: pointer;
       border-radius: 4px;
     }

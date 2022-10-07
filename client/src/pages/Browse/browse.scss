@@ -21,7 +21,7 @@
       align-items: center;
       gap: 10px;
       padding: 10px 15px;
-      background-color: $subColor;
+      background-color: var(--app-subColor);
       border-radius: 6px;
       width: fit-content;
 
@@ -30,8 +30,8 @@
       }
 
       input {
-        color: $mainTextColor;
-        background-color: $subColor;
+        color: var(--app-mainTextColor);
+        background-color: var(--app-subColor);
         padding: 10px;
         border: none;
         border-bottom: 1px solid #808080;

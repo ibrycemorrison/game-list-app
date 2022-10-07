@@ -7,9 +7,9 @@
   position: fixed;
   top: 0px;
   left: 0px;
-  background-color: $subColor;
+  background-color: var(--app-subColor);
   z-index: 3;
-  height: $topbarHeight;
+  height: var(--app-topbarHeight);
   width: 100vw;
 
   .container {
