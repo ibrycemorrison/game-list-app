@@ -1,5 +1,14 @@
 import React from "react";
 import "./footer.scss";
+import { themeColorTemplates } from "../data/theme-colors";
+
+export const changeTheme = (theme) => {
+  document.documentElement.style.setProperty("--app-mainBackgroundColor", themeColorTemplates[theme].mainBackgroundColor);
+  document.documentElement.style.setProperty("--app-mainTextColor", themeColorTemplates[theme].mainTextColor);
+  document.documentElement.style.setProperty("--app-subColor", themeColorTemplates[theme].subColor);
+  document.documentElement.style.setProperty("--app-highlightColor", themeColorTemplates[theme].highlightColor);
+  document.documentElement.style.setProperty("--app-logoFilter", themeColorTemplates[theme].logoFilter);
+};
 
 export default function Footer() {
   /**
@@ -8,20 +17,19 @@ export default function Footer() {
    */
   const handleClick = (theme) => {
     localStorage.setItem("theme-color", theme);
+    changeTheme(theme);
   };
 
   return (
-    <div className={'footer'}>
+    <div className={"footer"}>
       <div className="container">
         <footer>
           <div className="left">
-            <img src="assets/logo.svg" alt="" />
+            <img src="assets/logo.svg" alt="" id="footer-logo" />
             <div className="theme-options">
-              <div
-                id="theme-light"
-                onClick={() => handleClick("theme-light")}
-              />
-              <div id="theme-dark" onClick={() => handleClick("theme-dark")} />
+              <div id="themeDark" onClick={() => handleClick("themeDark")} />
+              <div id="themeLight" onClick={() => handleClick("themeLight")} />
+              <div id="themePurple" onClick={() => handleClick("themePurple")} />
             </div>
           </div>
           <div className="right">

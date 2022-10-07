@@ -21,8 +21,7 @@
 
     .logo {
       img {
-        filter: invert(43%) sepia(82%) saturate(1754%) hue-rotate(175deg)
-          brightness(105%) contrast(102%);
+        filter: var(--app-logoFilter);
         width: 50px;
         cursor: pointer;
       }

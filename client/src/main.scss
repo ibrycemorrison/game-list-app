@@ -4,12 +4,15 @@
   --app-mainTextColor: #ffffff;
   --app-subColor: #152232;
   --app-highlightColor: #02a9ff;
+  --app-logoFilter: brightness(0) saturate(100%) invert(43%) sepia(82%) saturate(1754%) hue-rotate(175deg)
+  brightness(105%) contrast(102%);
 }
 
 .app {
   background-color: var(--app-mainBackgroundColor);
   color: var(--app-mainTextColor);
   caret-color: var(--app-mainTextColor);
+  transition: all 0.3s ease;
 
   .container {
     .link {

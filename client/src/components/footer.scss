@@ -27,8 +27,7 @@
         gap: 20px;
 
         img {
-          filter: invert(43%) sepia(82%) saturate(1754%) hue-rotate(175deg)
-            brightness(105%) contrast(102%);
+          filter: var(--app-logoFilter);
           height: 50px;
         }
 
@@ -44,23 +43,23 @@
             margin: 2px 10px;
             border: 1px solid #fff;
             display: inline-block;
-            opacity: 0.5;
-
-            &.active {
-              opacity: 1;
-            }
           }
 
-          #theme-light {
+          #themeLight {
             background-color: #eee;
           }
-          #theme-dark {
+          #themeDark {
             background-color: rgb(58, 58, 80);
+          }
+          #themePurple {
+            background-color: #6437a0;
           }
         }
       }
 
       .right {
+        color: #fff;
+
         #my-name {
           padding: 5px;
           color: rgb(255, 255, 255);

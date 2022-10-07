@@ -12,7 +12,7 @@ export default function Topbar() {
       <div className="container">
         <div className="logo">
           <Link to="/">
-            <img src="assets/logo.svg" alt="" />
+            <img src="assets/logo.svg" alt="" id="topbar-logo" />
           </Link>
         </div>
         <div className="links">
