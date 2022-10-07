@@ -18,14 +18,13 @@ export default function Browse() {
     e.preventDefault();
     try {
       const games = await axios.post("/games/fetchGames", inputs);
-      console.log(games.data);
       const gamesWithCovers = await axios.post(
         "/games/fetchCovers",
         games.data
       );
       setGameData(gamesWithCovers.data);
     } catch (err) {
-      console.log(err);
+      setGameData([]);
     }
   };
 

@@ -28,4 +28,12 @@
       brightness(105%) contrast(102%);
     height: 50px;
   }
+
+  #my-name {
+    padding: 5px;
+    color: rgb(255, 255, 255);
+    background-color: $highlightColor;
+    text-shadow: 2px 2px #000000;
+    border-radius: 4px;
+  }
 }

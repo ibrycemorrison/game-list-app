@@ -11,23 +11,27 @@ $subColor: $subDark;
 $highlightColor: $highlightDark;
 
 .app {
-  min-height: calc(100vh - $topbarHeight);
   background-color: $mainBackgroundColor;
   color: $mainTextColor;
   caret-color: $mainTextColor;
 
   .container {
-    
     .link {
       text-decoration: none;
       color: inherit;
     }
 
-    .outletcontainer {
+    .page-content {
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      margin-top: $topbarHeight;
+      justify-content: space-between;
+      .outletcontainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: $topbarHeight;
+      }
     }
   }
 }

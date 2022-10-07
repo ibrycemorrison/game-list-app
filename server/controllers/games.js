@@ -1,7 +1,7 @@
 import { db } from "../database.js";
 import axios from "axios";
 
-const limit = 14;
+const limit = 20;
 
 export const fetchGames = (req, res) => {
   const client_id = process.env["CLIENT_ID"];

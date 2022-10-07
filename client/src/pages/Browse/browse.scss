@@ -38,6 +38,10 @@
         width: 300px;
       }
 
+      input:focus {
+        outline: none;
+      }
+
       #submit {
         display: none;
       }

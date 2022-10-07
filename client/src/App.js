@@ -16,10 +16,12 @@ const Layout = () => {
   return (
     <>
       <Topbar />
-      <div className="outletcontainer">
-        <Outlet />
+      <div className="page-content">
+        <div className="outletcontainer">
+          <Outlet />
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 };
