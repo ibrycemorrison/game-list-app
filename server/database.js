@@ -1,15 +1,10 @@
-import mysql from "mysql";
 import dotenv from "dotenv"
 import { MongoClient } from "mongodb";
 
+// Configure the environment variables
 dotenv.config();
 
-export const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "admin",
-  database: "gamelist",
-});
-
+// Connect the mongoDB database
 export const mongoDB = new MongoClient(process.env.MONGO_URI);
+// Pull the "users" collection from the mongoDB database
 export const usersDB = mongoDB.db("gamelistdb").collection("users");

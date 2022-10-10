@@ -4,7 +4,14 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../context/authContext";
 import "./topbar.scss";
 
+/**
+ * 
+ * @returns Topbar HTML
+ */
 export default function Topbar() {
+  // Context imported:
+  //    currentUser - Current user Object
+  //    logout      - Function to logout the current user
   const { currentUser, logout } = useContext(AuthContext);
 
   return (

@@ -1,3 +1,4 @@
+// Data representing colors for the current app theme
 export const themeColorTemplates = {
   themeLight: {
     mainBackgroundColor: "#edf1f5",
