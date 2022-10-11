@@ -3,22 +3,19 @@ import "./gamebox.scss";
 
 /**
  *
- * @param {int} id The id of the game
- * @param {string} name The name of the game
- * @param {string} cover The link to cover art of the game
- * @param {string} url The IGDB url of the game
+ * @param {Object} game The object representing the current games properties
  * @returns Single Game Box HTML
  */
-export default function GameBox({ id, name, cover, url }) {
+export default function GameBox({ game, openModal }) {
   return (
-    <div className="gamebox">
+    <div className="gamebox" onClick={() => openModal(game)}>
       <img
-        src={cover ? cover : "assets/noimage.png"}
-        alt={name}
+        src={game.cover ? game.cover : "assets/noimage.png"}
+        alt={game.name}
         draggable="false"
       />
       <div className="label">
-        <span>{name}</span>
+        <span>{game.name}</span>
       </div>
     </div>
   );

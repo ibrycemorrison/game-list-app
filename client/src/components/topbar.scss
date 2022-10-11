@@ -45,10 +45,66 @@
 
     .profile {
       display: flex;
+      align-items: center;
       gap: 20px;
 
       .link {
         font-weight: bold;
+      }
+
+      .profile-picture {
+        img {
+          width: calc(var(--app-topbarHeight) * 0.65);
+          border-radius: 50%;
+          cursor: pointer;
+        }
+
+        .submenu-wrapper {
+          position: absolute;
+          width: 150px;
+          top: calc(var(--app-topbarHeight) - 18px);
+          right: calc(7.5vw - (var(--app-topbarHeight) * 0.65));
+          padding-top: 10px;
+          opacity: 0;
+          transition: all 150ms ease;
+          pointer-events: none;
+
+          .profilemenu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            background-color: var(--app-subColor);
+            border: 1px solid rgb(131, 131, 131);
+            border-radius: 4px;
+            padding: 1rem;
+            overflow: hidden;
+
+            .profilemenuitem {
+              font-weight: 500;
+              transition: all .2s ease;
+              opacity: .5;
+              cursor: pointer;
+
+              &:hover {
+                opacity: 1;
+              }
+            }
+          }
+        }
+
+        &:hover {
+          .submenu-wrapper {
+            opacity: 1;
+            pointer-events: auto;
+
+            &:hover {
+              opacity: 1;
+              pointer-events: auto;
+            }
+          }
+        }
       }
     }
   }

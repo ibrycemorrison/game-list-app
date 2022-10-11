@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import GameBox from "../../components/GameBox";
+import GameModal from "../../components/GameModal";
 import "./browse.scss";
 
 /**
@@ -14,6 +15,8 @@ export default function Browse() {
   });
   // gameData state, representing the current array of game data pulled from IGDB
   const [gameData, setGameData] = useState([]);
+  // selectedGame state, representing the current game as an object
+  const [selectedGame, setSelectedGame] = useState();
 
   /**
    * Function to handle change to the search bar input
@@ -47,6 +50,26 @@ export default function Browse() {
     }
   };
 
+  /**
+   * Opens a modal for the given game
+   * @param {Object} game The game the modal is being opened for
+   */
+  const openModal = (game) => {
+    console.log(game);
+    setSelectedGame(game);
+    document.getElementById("gamemodal").style.opacity = "1";
+    document.getElementById("gamemodal").style.pointerEvents = "auto";
+  };
+
+  /**
+   * Closes the current game modal, and sets the game to undefined
+   */
+  const closeModal = () => {
+    setSelectedGame(undefined);
+    document.getElementById("gamemodal").style.opacity = "0";
+    document.getElementById("gamemodal").style.pointerEvents = "none";
+  };
+
   return (
     <div className="browse">
       <div className="search">
@@ -66,15 +89,12 @@ export default function Browse() {
         <h1>Games</h1>
         <div className="game-container">
           {gameData.map((game) => (
-            <GameBox
-              key={game.id}
-              id={game.id}
-              name={game.name}
-              cover={game.cover}
-              url={game.url}
-            />
+            <GameBox key={game.id} game={game} openModal={openModal} />
           ))}
         </div>
+      </div>
+      <div className="gamemodal-container">
+        <GameModal selectedGame={selectedGame} closeModal={closeModal} />
       </div>
     </div>
   );

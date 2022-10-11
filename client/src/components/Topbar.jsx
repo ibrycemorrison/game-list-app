@@ -2,17 +2,17 @@ import React from "react";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../context/authContext";
+import ProfileMenu from "./ProfileMenu";
 import "./topbar.scss";
 
 /**
- * 
+ *
  * @returns Topbar HTML
  */
 export default function Topbar() {
   // Context imported:
   //    currentUser - Current user Object
-  //    logout      - Function to logout the current user
-  const { currentUser, logout } = useContext(AuthContext);
+  const { currentUser } = useContext(AuthContext);
 
   return (
     <div className="topbar">
@@ -37,16 +37,20 @@ export default function Topbar() {
           </Link>
         </div>
         <div className="profile">
-          {currentUser ? (
-            <Link className="link" onClick={logout}>
-              Logout
-            </Link>
-          ) : (
+          {!currentUser && (
             <Link className="link" to="/login">
               Login
             </Link>
           )}
           <span>{currentUser?.username}</span>
+          <div className="profile-picture">
+            {currentUser && (
+              <Link className="link" to="/profile">
+                <img src="assets/placeholder-profile.png" alt="" />
+              </Link>
+            )}
+            <ProfileMenu />
+          </div>
         </div>
       </div>
     </div>
