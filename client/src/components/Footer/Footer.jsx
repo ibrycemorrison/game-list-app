@@ -1,6 +1,6 @@
 import React from "react";
 import "./footer.scss";
-import { themeColorTemplates } from "../data/theme-colors";
+import { themeColorTemplates } from "../../data/theme-colors.js";
 
 /**
  * Function to change element colors based on the site theme selected

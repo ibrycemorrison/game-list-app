@@ -1,8 +1,8 @@
 import React from "react";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../context/authContext";
-import ProfileMenu from "./ProfileMenu";
+import { AuthContext } from "../../context/authContext";
+import ProfileMenu from "../ProfileMenu/ProfileMenu";
 import "./topbar.scss";
 
 /**

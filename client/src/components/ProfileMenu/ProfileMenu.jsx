@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../context/authContext";
+import { AuthContext } from "../../context/authContext";
 
 function ProfileMenuItem({ itemText, onClickFunction }) {
   return <div className="profilemenuitem">{itemText}</div>;

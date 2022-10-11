@@ -7,9 +7,9 @@ import GameList from "./pages/GameList/GameList.jsx";
 import Browse from "./pages/Browse/Browse.jsx";
 import Profile from "./pages/Profile/Profile.jsx";
 import PageNotFound from "./pages/PageNotFound/PageNotFound.jsx";
-import Topbar from "./components/Topbar";
-import Footer from "./components/Footer";
-import { changeTheme } from "./components/Footer";
+import Topbar from "./components/Topbar/Topbar.jsx";
+import Footer from "./components/Footer/Footer.jsx";
+import { changeTheme } from "./components/Footer/Footer.jsx";
 import "./main.scss";
 import { useEffect } from "react";
 
@@ -71,18 +71,18 @@ const router = createBrowserRouter([
 ]);
 
 /**
- * 
+ *
  * @returns Main App HTML
  */
 function App() {
   // useEffect to set theme color on page load
   useEffect(() => {
-    changeTheme(localStorage.getItem("theme-color"))
-  }, [])
+    changeTheme(localStorage.getItem("theme-color"));
+  }, []);
 
   // Return a div with our router
   return (
-    <div className='app'>
+    <div className="app">
       <div className="container">
         <RouterProvider router={router} />
       </div>

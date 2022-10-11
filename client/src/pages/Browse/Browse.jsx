@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
-import GameBox from "../../components/GameBox";
-import GameModal from "../../components/GameModal";
+import GameBox from "../../components/GameBox/GameBox";
+import GameModal from "../../components/GameModal/GameModal";
 import "./browse.scss";
 
 /**
