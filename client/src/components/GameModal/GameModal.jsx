@@ -1,5 +1,6 @@
 import React from "react";
 import "./gamemodal.scss";
+import "../../main.scss";
 
 /**
  *

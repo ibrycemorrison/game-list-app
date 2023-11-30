@@ -9,9 +9,9 @@ import Profile from "./pages/Profile/Profile.jsx";
 import PageNotFound from "./pages/PageNotFound/PageNotFound.jsx";
 import Topbar from "./components/Topbar/Topbar.jsx";
 import Footer from "./components/Footer/Footer.jsx";
-import { changeTheme } from "./components/Footer/Footer.jsx";
+// import { changeTheme } from "./components/Footer/Footer.jsx";
 import "./main.scss";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 // Create general Layout for a page with a Topbar and Footer
 const Layout = () => {
@@ -76,9 +76,9 @@ const router = createBrowserRouter([
  */
 function App() {
   // useEffect to set theme color on page load
-  useEffect(() => {
-    changeTheme(localStorage.getItem("theme-color"));
-  }, []);
+  // useEffect(() => {
+  //   changeTheme(localStorage.getItem("theme-color"));
+  // }, []);
 
   // Return a div with our router
   return (

@@ -13,7 +13,7 @@
   transform: translate(-50%, -50%);
   background-color: var(--app-mainBackgroundColor);
   border: 2px solid #7a7a7a;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 
   .gamemodal-top-container {
     display: flex;
@@ -39,8 +39,8 @@
         filter: invert(50%) sepia(0%) saturate(0%) hue-rotate(210deg)
           brightness(95%) contrast(87%);
         cursor: pointer;
-        transition: all .2s ease;
-        opacity: .5;
+        transition: all 0.2s ease;
+        opacity: 0.5;
 
         &:hover {
           opacity: 1;
@@ -64,7 +64,7 @@
       flex-direction: column;
 
       img {
-        width: 75%;
+        width: 65%;
         border-radius: 4px;
       }
     }
@@ -77,6 +77,27 @@
       display: flex;
       align-items: center;
       flex-direction: column;
+
+      form {
+        color: white;
+        
+        .MuiInputLabel-formControl {
+          color: var(--app-mainTextColor);
+        }
+
+        .MuiSelect-select {
+          color: var(--app-mainTextColor);
+        }
+
+        .MuiOutlinedInput-notchedOutline {
+          border-color: var(--app-mainTextColor);
+        }
+
+        .MuiSvgIcon-root {
+          filter: brightness(0) saturate(100%) invert(100%) sepia(100%)
+            saturate(0%) hue-rotate(305deg) brightness(103%) contrast(103%);
+        }
+      }
     }
   }
 }
