@@ -34,6 +34,7 @@ import "./footer.scss";
  * @returns Footer HTML
  */
 export default function Footer() {
+  // TODO Optimize or remove
   // /**
   //  * Function to handle changing color themes
   //  * @param theme String representing the theme currently being used
