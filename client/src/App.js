@@ -75,7 +75,7 @@ const router = createBrowserRouter([
  * @returns Main App HTML
  */
 function App() {
-  // TODO Update or remove
+  // TODO Update or remove ...
   // useEffect to set theme color on page load
   // useEffect(() => {
   //   changeTheme(localStorage.getItem("theme-color"));
