@@ -1,39 +1,48 @@
 # GameList Website Project
 
-## Creation Process
+## Project Description
+The goal of this GameList project is to display my skills with various different technologies to create a cohesive product. This project is built using the **MERN** stack, and utilizes the [IGDB API](https://api-docs.igdb.com/#getting-started) for pulling game data.
+
+This app will allow users to search for games that they have played, and add them to their profiles, along with data such as a rating and time played.
+
+This app is inspired by websites/services such as [Backloggd](https://backloggd.com/), [MyAnimeList](https://myanimelist.net/), and [AniList](https://anilist.co/).
+
+![Game Search Sample](https://cdn.discordapp.com/attachments/240275194797621249/1180565736494739546/image.png?ex=657de285&is=656b6d85&hm=07948b6f36b1c36fa7d8bbbf1c064471a563a21b7b4be7ff78f40721592bfc93&)
+
+## How to Launch Locally
+1. Clone this repository
+```
+git clone {repo url}
+```
+
+---
 
 ### Client
-1. Clone "react-mini" branch from Lama Dev GitHub
+2. Navigate to client directory
 ```
-git clone --single-branch -b "react-mini" https://github.com/safak/youtube2022.git .
+cd client
 ```
-2. Install libraries
+3. Install libraries
 ```
 npm install
 ```
-3. You can start the app with the following command
+4. Start the client-side
 ```
 npm start
 ```
 
-<br>
-
-- Install React Router DOM
-```
-npm i react-router-dom
-```
-
-<br>
-
 ---
 
 ### Server
-1. Initialize folder with the following command
+5. Navigate to server directory
 ```
-npm init -y
+cd ../server
 ```
-2. Create index.js file
-3. Install libraries with the following command
+6. Install required dependencies
 ```
-npm i express mysql nodemon
+npm install
+```
+7. Start the server-side
+```
+npm start
 ```
